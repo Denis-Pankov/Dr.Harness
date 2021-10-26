@@ -1,0 +1,39 @@
+.table-size {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 51px;
+	background-image: url(../img/Rectangle\ 557.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+
+@media (max-width:960px) {
+  .table-size {
+		display: none;
+	}
+}
+
+.table-size__title {
+	margin-bottom: 10px;
+	padding-top: 33px;
+}
+
+.table-size__container {
+	padding-top: 33px;
+	padding-bottom: 27px;	
+	max-width: 940px;
+	background-color: #fff;
+}
+
+.table-size__table {
+	max-width: 880px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+
+.th-left {
+	text-align: left;
+}

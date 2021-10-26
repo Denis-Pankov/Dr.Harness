@@ -1,0 +1,91 @@
+.order {
+	padding-bottom: 120px;
+	background-color: #f7f2f4;
+}
+
+@media (max-width:960px) {
+  .order {
+		display: none;
+	}
+}
+
+.order__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.order__title {
+	padding-top: 65px;
+	padding-bottom: 21px;
+	font-size: 60px;
+	font-weight: 700;
+}
+
+.order__list {
+	position: relative;
+	display: flex;	
+	justify-content: space-between;
+}
+
+.order__list::before {
+	position: absolute;
+	content: '';
+	top: 75%;
+	left: 12.2%;
+	width: 77%;
+	height: 0px;
+	border-bottom: 1px dotted #d5d4d9;
+}
+
+.order__item {
+	position: relative;
+	display: flex;
+	width: calc((100% - 60px)/4);
+	padding-top: 212px;
+	text-align: center;	
+	line-height: 1.4em;
+}
+
+.order__item::before {
+	position: absolute;
+	content: '';
+	top: 28px;
+	left: 40px;
+	width: 136px;
+	height: 136px;
+	background-color: var(--pint4e);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 6px solid #d579a1;
+	border-radius: 50%;
+}
+
+.order__item-decoration::before {	
+	background-image: url(../img/028-newspaper.png);	
+}
+
+.order__item-call::before {	
+	background-image: url(../img/002-telemarketer.png);	
+}
+
+.order__item-post::before {	
+	background-image: url(../img/030-package-1.png);	
+}
+
+.order__item-payment::before {	
+	background-image: url(../img/003-credit-card.png);	
+}
+
+.order__item::after {
+	position: absolute;
+	content: '';
+	top: 73%;
+	left: 49%;
+	width: 10px;
+	height: 10px;
+	background-color: #ceced3;
+	box-shadow: 0px 0px 3px 3px #ebe7ea;
+	border-radius: 50%;
+}
+

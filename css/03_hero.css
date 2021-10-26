@@ -1,0 +1,109 @@
+.hero {
+	background-image: url(../img/Layer5951.jpg);
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+@media (max-width:960px) {
+	.hero {
+		background-image: url(../img/960.jpg);
+	}
+}
+
+.hero__bannerr {
+	padding-top: 82px;
+	padding-bottom: 125px;
+}
+
+@media (max-width:640px) {
+	.hero {
+		background-image: url(../img/640.jpg);
+	}
+	.hero__bannerr {
+		padding-top: 85px;
+		padding-bottom: 65px;
+	}
+}
+
+.bannerr {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+}
+
+.bannerr__main {
+	margin-bottom: 9px;
+	font-size: 35px;
+	font-weight: 300;
+}
+
+.bannerr__brand {
+	margin-bottom: 46px;
+	padding-bottom: 26px;
+	border-bottom: 3px solid;
+	line-height: 0.85;
+	font-size: 82px;
+	font-weight: 700;
+}
+
+.bannerr__discont {
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.bannerr__price {
+	margin-bottom: 45px;
+	font-size: 33px;
+	font-weight: 700;
+}
+
+.bannerr__cost {
+	padding-left: 16px;
+	padding-right: 5px;
+	font-size: 46px;
+}
+
+.bannerr__list {
+	display: flex;
+	align-items: center;
+	/* transform: translateX(-8px); */
+}
+
+.bannerr__item:not(:last-child) {
+	margin-right: 21px;
+}
+
+.bannerr__btn {
+	padding: 23px 20px;
+	border: 1px solid;
+	background-color: transparent;
+	transition: color 200ms;
+}
+
+@media (max-width:640px) {
+	.bannerr__list {
+		display: block;
+		min-width: 320px;
+	}
+	.bannerr__item:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.bannerr__btn {
+		width: 100%;
+	}
+}
+
+.bannerr__btn:hover {
+	color: #fdb0b0;
+}
+
+.bannerr__btn:focus {
+	color: #fdb0b0;
+}
+
+.bannerr__btn:active {
+	color: #c78888;
+}

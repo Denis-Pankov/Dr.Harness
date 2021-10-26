@@ -1,0 +1,31 @@
+.ubout-us {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	padding-bottom: 340px;
+	background-image: url(../img/photo.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	text-align: center;
+}
+
+@media (max-width:960px) {
+  .ubout-us {
+		display: none;
+	}
+}
+
+.ubout-us__title {
+	padding-top: 40px;
+}
+
+.ubout-us__info {
+	padding-top: 17px;
+	padding-bottom: 5px;
+	line-height: 1.8;
+}
+
+.ubout-us__info:last-child {
+	padding-top: 8px;
+}
