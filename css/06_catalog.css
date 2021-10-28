@@ -254,7 +254,12 @@
 }
 
 .catalog-modal__img {
+	display: none;
 	background-size: cover;
+}
+
+.catalog-modal__img.active {
+	display: block;
 }
 
 .catalog-modal__info {
@@ -268,7 +273,12 @@
 }
 
 .catalog-modal__name {
+	display: none;
 	margin-bottom: 10px;	
+}
+
+.catalog-modal__name.active {
+	display: block;
 }
 
 .catalog-modal__prise-list {

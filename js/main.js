@@ -23,34 +23,32 @@
 			}
 		}
 
+		//Модалка
 		document.querySelectorAll('.catalog__item').forEach(function (modal) {
 			modal.addEventListener('click', function (event) {
-				const path = event.path[0].dataset.target;				
-				document.querySelector(`.catalog__modal[data-target="${path}"]`).classList.add('active');
+				const path = event.path[0].dataset.target;
+				document.querySelector(`.catalog-modal__img[data-img="${path}"]`).classList.add('active');
+				document.querySelector(`.catalog-modal__name[data-title="${path}"]`).classList.add('active');
+				document.querySelector('.catalog-modal').classList.add('active');
 				document.querySelector('.overlay').classList.add('active');
 			});
 		});
 
-		document.querySelectorAll('.catalog-modal__closed').forEach(function (modal) {
-			modal.addEventListener('click', function (event) {
+		document.querySelector('.catalog-modal__closed').addEventListener('click', modalClosed);
+		document.querySelector('.overlay').addEventListener('click', modalClosed);
 
-				document.querySelectorAll('.catalog__modal').forEach(function (modalClosed) {
-					modalClosed.classList.remove('active');
-					document.querySelector('.overlay').classList.remove('active');
-				});
+		function modalClosed() {
+			document.querySelectorAll('.catalog-modal__img').forEach(function(modalClosedImg) {
+				modalClosedImg.classList.remove('active');
 			});
-		});
 
-		document.querySelectorAll('.overlay').forEach(function (modalBg) {
-			modalBg.addEventListener('click', function (event) {
-
-				document.querySelectorAll('.catalog__modal').forEach(function (modalClosedBg) {
-					modalClosedBg.classList.remove('active');
-					document.querySelector('.overlay').classList.remove('active');
-				});
-
+			document.querySelectorAll('.catalog-modal__name').forEach(function(modalClosedName) {
+				modalClosedName.classList.remove('active');
 			});
-		});
+
+			document.querySelector('.catalog__modal').classList.remove('active');
+			document.querySelector('.overlay').classList.remove('active');
+		}
 
 	});
 })();
